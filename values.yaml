@@ -18,10 +18,11 @@ serverFiles:
 
 prometheusOperator:
   createCustomResource: false
-
-thanos:
-  baseImage: thanosio/thanos
-  version: v0.8.1
-  objectStorageConfig:
-    key: thanos.yaml
-    name: thanos-objstore-config
+prometheus:
+  prometheusSpec:
+    thanos:
+      baseImage: thanosio/thanos
+      version: v0.8.1
+      objectStorageConfig:
+        key: thanos.yaml
+        name: thanos-objstore-config
