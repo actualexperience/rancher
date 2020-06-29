@@ -1,5 +1,0 @@
-commonLabels:
-  release-name: prometheus
-namespace:  monitoring
-resources:
-- prometheus.yaml
