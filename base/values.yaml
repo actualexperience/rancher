@@ -13,3 +13,10 @@ serverFiles:
   alerts: {}
   prometheus.yml: {}
   rules: {}
+
+thanos:
+  baseImage: thanosio/thanos
+  version: v0.8.1
+  objectStorageConfig:
+    key: thanos.yml
+    name: thanos-objstore-config
