@@ -14,6 +14,9 @@ serverFiles:
   prometheus.yml: {}
   rules: {}
 
+prometheusOperator:
+  createCustomResource: false
+
 thanos:
   baseImage: thanosio/thanos
   version: v0.8.1
