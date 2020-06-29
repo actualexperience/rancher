@@ -1,5 +1,5 @@
 version: 1
 patchUpdated:
   generators:
-    - command kusomize build .
+    - command: kustomize build .
   patchFile: flux-patch.yaml

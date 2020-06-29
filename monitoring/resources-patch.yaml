@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -40,7 +41,7 @@ spec:
 ---
 apiVersion: apps/v1
 kind: Deployment
-metadata:     
+metadata:
   name: monitoring-kube-state-metrics
 spec:
   template:
