@@ -18,5 +18,5 @@ thanos:
   baseImage: thanosio/thanos
   version: v0.8.1
   objectStorageConfig:
-    key: thanos.yml
+    key: thanos.yaml
     name: thanos-objstore-config
