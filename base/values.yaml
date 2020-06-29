@@ -8,7 +8,7 @@ pushgateway:
   enabled: false
 server:
   extraArgs:
-    storage.local.retention: 24h
+    storage.tsdb.retention: 24h
 serverFiles:
   alerts: {}
   prometheus.yml: {}
