@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monitoring-prometheus-oper-operator
+spec:
+  template:
+    spec:
+      containers:
+        - name: prometheus-operator
+          resources:
+            limits:
+              cpu: 12m
+              memory: 125Mi
+            requests:
+              cpu: 12m
+              memory: 125Mi
+        - name: tls-proxy
+          resources:
+            limits:
+              cpu: 12m
+              memory: 125Mi
+            requests:
+              cpu: 12m
+              memory: 125Mi
+
