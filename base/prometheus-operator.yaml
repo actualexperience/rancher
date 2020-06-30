@@ -37176,7 +37176,7 @@ spec:
   logFormat:  logfmt
   listenLocal: false
   enableAdminAPI: false
-  retention: "10d"
+  retention: "1d"
   routePrefix: "/"
   serviceAccountName: monitoring-prometheus-oper-prometheus
   serviceMonitorSelector:
@@ -37200,8 +37200,17 @@ spec:
       app: prometheus-operator
       release: "monitoring"
 
+  storage:
+    volumeClaimTemplate:
+      spec:
+        resources:
+          requests:
+            storage: 1Gi
+        storageClassName: local-path
   thanos:
     baseImage: thanosio/thanos
+    listenLocal: true
+    logLevel: debug
     objectStorageConfig:
       key: thanos.yaml
       name: thanos-objstore-config

@@ -22,9 +22,19 @@ prometheusOperator:
 
 prometheus:
   prometheusSpec:
+    retention: 1d
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: local-path
+          resources:
+            requests:
+              storage: 1Gi
     thanos:
       baseImage: thanosio/thanos
       version: v0.13.0
+      listenLocal: true
+      logLevel: debug
       objectStorageConfig:
         key: thanos.yaml
         name: thanos-objstore-config
