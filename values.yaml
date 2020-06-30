@@ -11,6 +11,7 @@ pushgateway:
 server:
   extraArgs:
     storage.tsdb.retention: 24h
+
 serverFiles:
   alerts: {}
   prometheus.yml: {}
@@ -18,11 +19,12 @@ serverFiles:
 
 prometheusOperator:
   createCustomResource: false
+
 prometheus:
   prometheusSpec:
     thanos:
-      image: thanosio/thanos
-      version: v0.8.1
+      image: thanos-io/thanos
+      version: v0.13.0
       objectStorageConfig:
         key: thanos.yaml
         name: thanos-objstore-config

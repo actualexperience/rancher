@@ -37201,11 +37201,11 @@ spec:
       release: "monitoring"
 
   thanos:
-    image: thanosio/thanos
+    image: thanos-io/thanos
     objectStorageConfig:
       key: thanos.yaml
       name: thanos-objstore-config
-    version: v0.8.1
+    version: v0.13.0
   portName: web
 ---
 # Source: prometheus-operator/templates/prometheus/rules-1.14/alertmanager.rules.yaml
