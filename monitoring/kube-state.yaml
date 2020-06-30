@@ -3,12 +3,14 @@ kind: Deployment
 metadata:
   name: monitoring-kube-state-metrics
 spec:
-  containers:
-    - name: kube-state-metrics
-      resources:
-        limits:
-          cpu: 25m
-          memory: 250Mi
-        requests:
-          cpu: 25m
-          memory: 250Mi
+  template:
+    spec:
+      containers:
+        - name: kube-state-metrics
+          resources:
+            limits:
+              cpu: 25m
+              memory: 250Mi
+            requests:
+              cpu: 25m
+              memory: 250Mi
