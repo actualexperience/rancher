@@ -21,7 +21,7 @@ prometheusOperator:
 prometheus:
   prometheusSpec:
     thanos:
-      baseImage: thanosio/thanos
+      image: thanosio/thanos
       version: v0.8.1
       objectStorageConfig:
         key: thanos.yaml
