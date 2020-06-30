@@ -37201,7 +37201,7 @@ spec:
       release: "monitoring"
 
   thanos:
-    image: thanos-io/thanos
+    image: thanosio/thanos
     objectStorageConfig:
       key: thanos.yaml
       name: thanos-objstore-config
